@@ -17,10 +17,12 @@ export default function FicheLogement() {
   const fetchData = async () => {
     try {
       const response = await fetch('/data.json');
+      console.log('Response:', response);
       if (!response.ok) {
         throw new Error('Erreur lors du chargement des données');
       }
       const data = await response.json();
+      console.log('Response:', response);
       setLogementsData(data); // Mettre à jour l'état avec les données
     } catch (err) {
       console.error('Erreur de chargement des données:', err);

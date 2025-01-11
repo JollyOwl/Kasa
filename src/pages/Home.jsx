@@ -13,6 +13,7 @@ export default function Home() {
       const fetchLogements = async () => {
         try {
           const response = await fetch('/data.json');
+          console.log('Response:', response);
           const data = await response.json();
           setLogements(data);
         } catch (error) {
