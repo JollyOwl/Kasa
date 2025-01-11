@@ -1,15 +1,48 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Collapse from '../components/Collapse';
 import { useParams } from 'react-router-dom';
-import logementsData from '../assets/data.json';
 import Tag from '../components/Tag';
 import Rating from '../components/Rating';
 import Carousel from '../components/Carousel'; // Import du composant Carousel
 
 export default function FicheLogement() {
   const { id } = useParams(); // Récupérer l'ID de l'URL
+  const [logementsData, setLogementsData] = useState([]); // État pour stocker les données du logement
+  const [loading, setLoading] = useState(true); // État pour gérer le chargement des données
+  const [error, setError] = useState(null); // État pour gérer les erreurs
+  
+  // Fonction async pour charger les données
+  const fetchData = async () => {
+    try {
+      const response = await fetch('/data.json');
+      if (!response.ok) {
+        throw new Error('Erreur lors du chargement des données');
+      }
+      const data = await response.json();
+      setLogementsData(data); // Mettre à jour l'état avec les données
+    } catch (err) {
+      console.error('Erreur de chargement des données:', err);
+      setError('Erreur de chargement des données');
+    } finally {
+      setLoading(false); // Fin du chargement
+    }
+  };
+
+  // Utiliser useEffect pour charger les données à l'initialisation
+  useEffect(() => {
+    fetchData();
+  }, []); // Lancer la fonction de récupération des données lorsque le composant est monté
+
+  if (loading) {
+    return <div>Chargement...</div>; // Afficher un message de chargement
+  }
+
+  if (error) {
+    return <div>{error}</div>; // Afficher un message d'erreur si nécessaire
+  }
+
   const logement = logementsData.find(item => item.id === id); // Filtrer les données en fonction de l'ID
 
   if (!logement) {

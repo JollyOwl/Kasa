@@ -12,7 +12,7 @@ export default function Home() {
     useEffect(() => {
       const fetchLogements = async () => {
         try {
-          const response = await fetch('/src/assets/data.json');
+          const response = await fetch('/data.json');
           const data = await response.json();
           setLogements(data);
         } catch (error) {
