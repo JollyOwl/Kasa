@@ -17,7 +17,7 @@ export default function Carousel({ pictures }) {
   };
 
   return (
-    <div className="relative w-full h-64 overflow-hidden">
+    <div className="relative w-full h-64 overflow-hidden rounded-3xl">
       {/* Image affichée */}
       <img
         src={pictures[currentIndex]}
