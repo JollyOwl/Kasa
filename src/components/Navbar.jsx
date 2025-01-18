@@ -10,7 +10,7 @@ export default function Navbar() {
     </div>
     <div className="flex gap-[40px] items-stretch">
     <NavLink
-          to="/kasa/"
+          to="kasa/"
           className={({ isActive }) =>
             `py-[24px] text-gray-800 hover:font-bold transition-colors ${
               isActive ? 'underline' : ''
