@@ -2,6 +2,7 @@
   "name": "kasa",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://jollyowl.github.io/kasa/",
   "type": "module",
   "scripts": {
     "dev": "vite",
