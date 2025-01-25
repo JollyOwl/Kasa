@@ -6,3 +6,4 @@ Open Classroom project by sarah-Sophie Thouabtia
 
 React + Vite 
 Tailwind CSS 
+json file for data
