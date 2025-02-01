@@ -14,7 +14,6 @@ export default function NotFound() {
       <div className=' mx-auto flex flex-col justify-center text-center h-[38rem] gap-8' > 
       <div className='flex justify-center w-full '>
         <img src={NotFoundPic} alt="404" className="w-80 align-center" />
-
         </div>
         <p className='text-3xl text-red-600 align-center'>Oups! La page que vous demandez n'existe pas.</p>
         <Link to="/" className='underline' >Retourner sur la page d’accueil</Link>

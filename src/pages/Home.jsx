@@ -12,8 +12,10 @@ export default function Home() {
     useEffect(() => {
       const fetchLogements = async () => {
         try {
-          const response = await fetch('/data.json');
-          console.log('Response:', response);
+          const response = await fetch('/kasa/data.json');
+          if (!response.ok) {
+            throw new Error('Erreur réseau');
+          }
           const data = await response.json();
           setLogements(data);
         } catch (error) {
@@ -22,6 +24,8 @@ export default function Home() {
       };
       fetchLogements();
     }, []);
+
+
 
   return (
     <>
