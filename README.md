@@ -8,5 +8,9 @@ React + Vite
 Tailwind CSS 
 json file for data
 
-# URL 
+# Github repo
+https://github.com/JollyOwl/kasa.git
+
+# Live site
 https://jollyowl.github.io/kasa/
+
