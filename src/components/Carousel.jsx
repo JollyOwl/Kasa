@@ -33,14 +33,32 @@ export default function Carousel({ pictures }) {
       {pictures.length > 1 && (
         <button
           onClick={goToPrevious}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 md:w-24"
           aria-label="Previous"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24">
-            <path
-              fill="currentColor"
-              d="M15.41 16.58L10.83 12l4.58-4.59L14 6l-6 6 6 6z"
-            ></path>
+          <svg
+            className="w-6 md:w-24"
+            height="auto"
+            viewBox="0 0 96 120"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clipPath="url(#clip0_369_231)">
+              <path
+                d="M70.04 15.7832L62.92 8.70319L23.36 48.3032L62.96 87.9032L70.04 80.8232L37.52 48.3032L70.04 15.7832Z"
+                fill="white"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_369_231">
+                <rect
+                  width="96"
+                  height="119.64"
+                  fill="white"
+                  transform="translate(0 0.303284)"
+                />
+              </clipPath>
+            </defs>
           </svg>
         </button>
       )}
@@ -49,14 +67,32 @@ export default function Carousel({ pictures }) {
       {pictures.length > 1 && (
         <button
           onClick={goToNext}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 md:w-24"
           aria-label="Next"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24">
-            <path
-              fill="currentColor"
-              d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6z"
-            ></path>
+          <svg
+            className="w-6 md:w-24"
+            height="auto"
+            viewBox="0 0 96 121"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clipPath="url(#clip0_369_235)">
+              <path
+                d="M25.96 81.3458L33.04 88.4258L72.64 48.8258L33.04 9.22581L25.96 16.3058L58.48 48.8258L25.96 81.3458Z"
+                fill="white"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_369_235">
+                <rect
+                  width="96"
+                  height="119.64"
+                  fill="white"
+                  transform="translate(0 0.825912)"
+                />
+              </clipPath>
+            </defs>
           </svg>
         </button>
       )}

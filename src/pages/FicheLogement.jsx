@@ -77,7 +77,7 @@ export default function FicheLogement() {
             </div>
           </div>
 
-          <div className='grid md:grid-cols-2 gap-8 auto-rows-min transition-all duration-500 pb-12'> 
+          <div className='flex md:grid-cols-2 gap-8 auto-rows-min transition-all duration-500 pb-12'> 
             <Collapse title="Description">
               <p>{logement.description}</p>
             </Collapse>

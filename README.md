@@ -6,7 +6,7 @@ Open Classroom project by sarah-Sophie Thouabtia
 
 React + Vite 
 Tailwind CSS 
-json file for data
+json files for data
 
 # Github repo
 https://github.com/JollyOwl/kasa.git

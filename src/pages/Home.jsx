@@ -40,7 +40,7 @@ export default function Home() {
                   <h1 className="text-white text-3xl font-bold relative z-10 inline-block ">Chez vous, partout et ailleurs</h1></div>
 
         </div>
-        <div className="bg-transparent md:bg-slate-200 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 rounded-xl mx-auto w-full my-14">
+        <div className="bg-transparent p-8 md:bg-slate-100 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 rounded-xl mx-auto w-full my-14">
             {logements.map(logement => (
                 <Card key={logement.id} logement={logement} />
             ))}
